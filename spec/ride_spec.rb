@@ -21,4 +21,20 @@ RSpec.describe Ride do
       expect(@millennium.passengers).to eq([])
     end
   end
+
+  describe 'methods' do
+    before :each do
+      @millennium = Ride.new("Millennium Force", 5, 8)
+      @aurelia = Person.new({"name" => "Aurelia", "age" => 18, "intensity_max" => 5})
+      @taylor = Person.new({"name" => "Taylor", "age" => 12, "intensity_max" => 3})
+      @lauren = Person.new({"name" => "Lauren", "age" => 20, "intensity_max" => 8})
+    end
+
+    it 'adds passengers to ride' do
+      @millennium.add_passenger(@aurelia)
+      @millennium.add_passenger(@taylor)
+      @millennium.add_passenger(@lauren)
+      expect(@millennium.passengers).to eq(@aurelia, @taylor, @lauren)
+    end
+  end
 end
