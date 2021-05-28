@@ -28,13 +28,17 @@ RSpec.describe Ride do
       @aurelia = Person.new({"name" => "Aurelia", "age" => 18, "intensity_max" => 5})
       @taylor = Person.new({"name" => "Taylor", "age" => 12, "intensity_max" => 3})
       @lauren = Person.new({"name" => "Lauren", "age" => 20, "intensity_max" => 8})
-    end
-
-    it 'adds passengers to ride' do
       @millennium.add_passenger(@aurelia)
       @millennium.add_passenger(@taylor)
       @millennium.add_passenger(@lauren)
-      expect(@millennium.passengers).to eq(@aurelia, @taylor, @lauren)
+    end
+
+    it 'adds passengers to ride' do
+      expect(@millennium.passengers).to eq([@aurelia, @taylor, @lauren])
+    end
+
+    it 'reports percentage of adult passengers' do
+      expect(millennium.percentage_adults).to eq(67)
     end
   end
 end

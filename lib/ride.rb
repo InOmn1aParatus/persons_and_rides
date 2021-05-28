@@ -10,4 +10,8 @@ class Ride
     @intensity = intensity
     @passengers = []
   end
+
+  def add_passenger(passenger)
+    @passengers << passenger
+  end
 end
