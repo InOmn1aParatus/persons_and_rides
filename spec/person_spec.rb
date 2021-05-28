@@ -32,5 +32,12 @@ RSpec.describe Person do
       expect(@aurelia.adult?).to eq(true)
       expect(@taylor.adult?).to eq(false)
     end
+
+    it 'increases max intensity with pep talk' do
+      @aurelia.pep_talk
+      @taylor.pep_talk
+      expect(@aurelia.intensity_max).to eq(6)
+      expect(@taylor.intensity_max).to eq(4)
+    end
   end
 end
