@@ -38,7 +38,7 @@ RSpec.describe Ride do
     end
 
     it 'reports percentage of adult passengers' do
-      expect(millennium.percentage_adults).to eq(67)
+      expect(@millennium.percentage_adults).to eq(67)
     end
   end
 end
