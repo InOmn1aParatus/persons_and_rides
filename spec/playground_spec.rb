@@ -49,11 +49,18 @@ RSpec.describe Playground do
       @ride2.add_passenger(@jeffy)
       @ride3.add_passenger(@jeff)
       @ride3.add_passenger(@jefftholomew)
-      expect(@playground.total_revenue).to eq(18)
+      expect(@playground.total_revenue).to eq(36)
     end
 
-    xit 'reports most popular kids ride' do
+    it 'reports most popular kids ride' do
+      @ride1.add_passenger(@aurelia)
+      @ride1.add_passenger(@jefferson)
+      @ride2.add_passenger(@taylor)
+      @ride2.add_passenger(@jeffy)
+      @ride3.add_passenger(@jeff)
+      @ride3.add_passenger(@jefftholomew)
 
+      expect(playground.kid_friendly).to eq(ride2)
     end
   end
 end
