@@ -62,7 +62,7 @@ RSpec.describe Playground do
       @ride3.add_passenger(@jeff)
       @ride3.add_passenger(@jefftholomew)
 
-      expect(playground.kid_friendly).to eq(ride2)
+      expect(@playground.kid_friendly).to eq(ride2)
     end
   end
 end
