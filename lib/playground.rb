@@ -12,10 +12,8 @@ class Playground
   end
 
   def total_revenue
-    total = 0
     @rides.map do |ride|
-      total += ride.cost * ride.passengers.length
-    end
-    total
+      ride.cost * ride.passengers.length
+    end.sum
   end
 end
