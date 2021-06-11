@@ -52,8 +52,6 @@ RSpec.describe Playground do
       expect(@playground.total_revenue).to eq(36)
     end
 
-    # Each playground can report its most popular kids ride.
-    # (The ride that has the greatest number of persons who are not adults riding it)
     it 'reports most popular kids ride' do
       @ride1.add_passenger(@aurelia)
       @ride1.add_passenger(@jefferson)
