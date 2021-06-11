@@ -16,4 +16,10 @@ class Playground
       ride.cost * ride.passengers.length
     end.sum
   end
+
+  def kid_friendly
+    @rides.min_by do |ride|
+      ride.percentage_adults
+    end
+  end
 end
